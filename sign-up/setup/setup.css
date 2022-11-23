@@ -1,0 +1,18 @@
+@import url('../../res/styles/default.css');
+
+.error{
+    border: 1px solid rgb(50, 50, 50);
+    border-radius: .5em;
+    padding: .5em .5em;
+    background-color: var(---gray-2);
+    color: var(---error-color-white);
+}
+.error *{
+    
+    margin: 0;
+}
+
+.sucessfull a{
+    color: white;
+    text-decoration: none;
+}

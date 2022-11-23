@@ -1,0 +1,122 @@
+:root {
+    ---black-mesa: #fa7b01;
+    ---dark-black-mesa: #784e00;
+
+    ---primary: #171717;
+
+    ---gray-1: #6e6e6e;
+    ---gray-2: #434343;
+    ---gray-3: #2f2f2f;
+    ---gray-white-1: #e9e9e9;
+    ---gray-white-2: #ffffff;
+    /* #dcdcdc; */
+
+    ---gray-alpha-50: #2b2a2aaa;
+
+    ---error-color-white: #ff9494;
+    ---error-color: #ff1b1b;
+    ---error-color-dark: #ce0f0f;
+
+
+
+    font-family: Roboto;
+}
+
+main {
+    flex-grow: 100;
+    margin: 1em 2em;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    background-color: var(---gray-3);
+}
+
+header {
+    background-color: var(---primary);
+    color: white;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    fill: var(---black-mesa);
+}
+
+header h1 {
+    margin: 0 0 0 .5em;
+}
+
+footer {
+    padding: .7em;
+    text-align: center;
+    color: white;
+    background-color: var(---primary);
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid var(---gray-alpha-50);
+    padding: .5em;
+}
+
+input[type='text'] + label::after,
+input[type='email'] + label::after,
+input[type='password'] + label::after,
+input[type='number'] + label::after {
+    background-color: var(---gray-white-2);
+    content: attr(data-text);
+    margin-left: .2em;
+    padding: 0 .2em 0 .2em;
+    color: var(---dark-black-mesa);
+    position: absolute;
+    transform: translateY(-200%);
+    transition-duration: .3s;
+}
+
+input[type='text']:focus + label::after,
+input[type='text']:not(:placeholder-shown) + label::after,
+input[type='email']:focus + label::after,
+input[type='email']:not(:placeholder-shown) + label::after,
+input[type='password']:focus + label::after,
+input[type='password']:not(:placeholder-shown) + label::after,
+input[type='number']:focus + label::after,
+input[type='number']:not(:placeholder-shown) + label::after {
+    transform: translateY(-290%);
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'] {
+    padding: .9em .5em .4em .5em;
+    background-color: var(---gray-white-2);
+    width: -webkit-fill-available;
+    display: block;
+    margin: 10px 0;
+}
+
+form {
+    border: 1px solid var(---gray-alpha-50);
+    font-family: none;
+    background-color: var(---gray-white-2);
+    border-radius: .6em;
+    padding: 1.3em;
+    min-width: 25%;
+}
+
+form h2 {
+    text-align: center;
+}

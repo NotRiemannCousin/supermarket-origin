@@ -1,0 +1,21 @@
+@import url('../res/styles/default.css');
+
+.error{
+    border: 1px solid #323232;
+    border-radius: .5em;
+    padding: .5em .5em;
+    background-color: var(---gray-white-1);
+    color: red;
+}
+.error *{
+    margin: 0;
+}
+
+.sucessfull a{
+    color: #324ebd;
+    text-decoration: none;
+}
+
+main h1 {
+    color: white;
+}
