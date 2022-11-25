@@ -1,21 +1,91 @@
 @import url('../res/styles/default.css');
 
-.error{
+.error {
     border: 1px solid #323232;
     border-radius: .5em;
     padding: .5em .5em;
     background-color: var(---gray-white-1);
     color: red;
 }
-.error *{
+
+.error * {
     margin: 0;
 }
 
-.sucessfull a{
+.sucessfull a {
     color: #324ebd;
     text-decoration: none;
 }
 
-main h1 {
+main {
     color: white;
+    background-color: var(---primary-light);
+    padding: 1em 2em;
+    border-radius: 1em;
+    display: grid;
+    grid-template:
+        'hello  content' min-content
+        'config content' min-content
+        'null   content' auto
+        / 1fr 2fr
+    ;
+}
+
+/* main div.division:first-child{
+    text-overflow: ellipsis;
+    te
+} */
+
+br .division {
+    background-color: var(---gray-white-1);
+}
+
+div.division {
+    padding: .7em 1.2em;
+    margin: .5em .3em;
+    border-radius: 1em;
+    background-color: var(---gray-3);
+    box-sizing: border-box;
+    border: solid 1.5px black;
+    border: 1.5px solid black;
+}
+
+div table {
+    background-color: var(---gray-2);
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid var(---primary-light);
+}
+
+div table thead tr td * {
+    margin: .3em .2em;
+    text-align: center;
+}
+
+div table td {
+    /* white-space: nowrap; */
+    /* text-overflow: ellipsis; */
+    overflow: hidden;
+    max-height: 2rem;
+    border: 1px solid var(---primary-light);
+    padding: .3em;
+}
+
+.link {
+    border-radius: 1em;
+    width: max-content;
+    display: block;
+    margin: 1em .5em .5em .5em;
+    padding: 1em;
+    background-color: var(---primary);
+    color: inherit;
+    text-decoration: none;
+}
+
+.content table{
+    display: block;
+}
+
+.content table tr>td:not(:first-child){
+    text-align: center;
 }

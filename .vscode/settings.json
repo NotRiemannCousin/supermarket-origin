@@ -6,13 +6,18 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
-        "classes/rb-mysql.php": true,
         "Sem título.png": true,
         "sign-up": true,
-        "res": true,
-        "classes": true,
+        "site": true,
+        // "res": true,
+        // "classes": true,
         "index.php": true,
         "styles.css": true,
-        "login.php":true
+        "login.php":true,
+        "logout.php":true,
+        // "**/*.php": true,
+        "**/*.html": true,
+        "**/*.css": true,
+        "sla.*": true,
     }
 }

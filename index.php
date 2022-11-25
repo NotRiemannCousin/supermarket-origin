@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+    session_start();
+
+    unset($_SESSION["id"]);
+    unset($_SESSION["hash"]);
+?>
 
 <head>
     <meta charset="UTF-8">
@@ -24,7 +30,7 @@
         <div>
             <a href="sign-up/sign-up.php">Sign-Up</a>
         </div>
-        <div class="error" <?= (isset($_GET['error']) ? '': 'style="animation-name: none; visibility: hidden;"') ?>>
+        <div class="error" <?= (isset($_GET['error']) ? '' : 'style="animation-name: none; visibility: hidden;"') ?>>
             O email ou a senha estão incorretos! Tente novamente.
         </div>
     </main>

@@ -3,6 +3,7 @@
     ---dark-black-mesa: #784e00;
 
     ---primary: #171717;
+    ---primary-light: #222;
 
     ---gray-1: #6e6e6e;
     ---gray-2: #434343;
@@ -16,10 +17,10 @@
     ---error-color-white: #ff9494;
     ---error-color: #ff1b1b;
     ---error-color-dark: #ce0f0f;
+    
 
 
-
-    font-family: Roboto;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 main {
@@ -38,6 +39,7 @@ body {
 }
 
 header {
+    font-family: Roboto;
     background-color: var(---primary);
     color: white;
     padding: 1em;
@@ -54,6 +56,7 @@ header h1 {
 }
 
 footer {
+    font-family: Roboto;
     padding: .7em;
     text-align: center;
     color: white;
@@ -119,4 +122,32 @@ form {
 
 form h2 {
     text-align: center;
+}
+
+
+.error {
+    color: white;
+    background-image: linear-gradient(var(---error-color), var(---error-color-dark));
+    position: fixed;
+    width: 50%;
+    padding: 0.7em 1.2em;
+    border-radius: 1em;
+    text-align: center;
+    top: 66%;
+
+    animation-name: hide-error-msg;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hide-error-msg {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        display: none;
+    }
 }

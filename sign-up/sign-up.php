@@ -24,9 +24,19 @@
             <input type="password" name="passwordconfirm" placeholder=" " required>
             <label data-text="Confirme a senha"></label>
             <p>Gênero:
-                <?= '<label>Masculino <input type="radio" name="genre" value="M"' .  (isset($_GET['genre']) ? ($_GET['genre'] == 'M' ? 'checked' : '') : '') . '></label>' ?>
-                <?= '<label>Feminino <input type="radio" name="genre" value="F" ' . (isset($_GET['genre']) ? ($_GET['genre'] == 'F' ? 'checked' : '') : '') . '></label>' ?>
+                <label><input type="radio" name="genre" value="M" checked required>Masculino</label>
+                <?= '<label><input type="radio" name="genre" value="F" ' . (isset($_GET['genre']) ? ($_GET['genre'] == 'F' ? 'checked' : '') : '') . ' required>Feminino</label>' ?>
             </p>
+            <div style="display: flex"> Cargos:
+                <div style="display: inline-block">
+                    <label><input type="radio" name="office" value="0" checked>Administrador</label><br>
+                    <label><input type="radio" name="office" value="1">user Comum</label><br>
+                    <label><input type="radio" name="office" value="2">Operador de Caixa</label><br>
+                    <label><input type="radio" name="office" value="3">Gerente de RG</label><br>
+                    <label><input type="radio" name="office" value="4">Contador</label>
+                </div>
+            </div>
+            <br>
             <input type="submit" value="Sing up">
         </form>
     </main>
