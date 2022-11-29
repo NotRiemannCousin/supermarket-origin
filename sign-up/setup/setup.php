@@ -10,13 +10,12 @@
 </head>
 
 <body>
-    <?php include_once '../../res/header.html'; ?>
+    <?php include_once '../../res/php/header.php'; ?>
     <main>
         <?php
-        require_once '../../classes/rb-mysql.php';
-        require_once '../../res/constants.php';
+        require_once '../../res/scripts/blackmesa.php';
 
-        $conn = R::setup('mysql:host=127.0.0.1;dbname=sistemaC', 'root', 'aluno');
+        $conn = mydbSetup();
 
         if (
             $conn &&
@@ -87,7 +86,7 @@
             </tbody>
         </table> */ ?>
     </main>
-    <?php include_once '../../res/footer.html';
+    <?php include_once '../../res/php/footer.php';
     R::close(); ?>
 </body>
 

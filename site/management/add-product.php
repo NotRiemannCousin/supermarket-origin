@@ -3,9 +3,9 @@
 <?php
 session_start();
 
-require_once '../../classes/rb-mysql.php';
+require_once '../../res/scripts/blackmesa.php';
 
-$conn = R::setup('mysql:host=127.0.0.1;dbname=sistemaC', 'root', 'aluno');
+$conn = mydbSetup();
 $user = R::load('user', $_SESSION["id"]);
 
 if(!in_array($user->office, [0, 2, 3]))
