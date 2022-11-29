@@ -1,5 +1,5 @@
 <?php
-class User
+abstract class User
 {
     protected $id;
     protected $name;
@@ -9,18 +9,13 @@ class User
     protected $permissions;
 
 
-    public static function create($data)
+    public function __construct($id, $name, $email, $password, $genre)
     {
-        $user = new User;
-
-        $user->id           =    $data['id'];
-        $user->name         =    $data['name'];
-        $user->email        =    $data['email'];
-        $user->password     =    $data['password'];
-        $user->genre        =    $data['genre'];
-        $user->permissions  =    $data['permissions'];
-
-        return $user;
+        $this->id           =    $id;
+        $this->name         =    $name;
+        $this->email        =    $email;
+        $this->password     =    $password;
+        $this->genre        =    $genre;
     }
 
 
