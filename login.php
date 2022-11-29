@@ -1,7 +1,7 @@
 <?php
 require_once '/res/scripts/blackmesa.php';
 
-$conn = R::setup('mysql:host=127.0.0.1;dbname=sistemaC', 'root', 'aluno');
+$conn = mydbSetup();
 
 session_start();
 

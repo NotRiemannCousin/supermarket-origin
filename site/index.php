@@ -13,13 +13,13 @@
 </head>
 
 <body>
-    <?php include_once '../res/header.html'; ?>
+    <?php include_once '../res/php/header.php'; ?>
     <main>
         <?php
 
         require_once '../res/scripts/blackmesa.php';
         
-        $conn = R::setup('mysql:host=127.0.0.1;dbname=sistemaC', 'root', 'aluno');
+        $conn = mydbSetup();
 
         $user = R::load('user', $_SESSION["id"]);
 
@@ -93,7 +93,7 @@
             <?= in_array($user->office, [0, 2, 3]) ? '<a class="link" href="management/add-product.php">Adicionar Produto</a>' : '' ?>
         </div>
     </main>
-    <?php include_once '../res/footer.html';
+    <?php include_once '../res/php/footer.php';
     R::close(); ?>
 </body>
 

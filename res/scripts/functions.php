@@ -1,8 +1,7 @@
 <?php
 
 function mydbSetup(){
-  return R::setup();//setup('mysql:host=localhost;dbname=sistemaC', 'root', 'aluno');
-  //return R::setup('mysql:host=localhost;dbname=sistemaC', 'root', 'aluno');
+  return R::setup('mysql:host=127.0.0.1;dbname=sistemaC', 'root', 'aluno');
 }
 
 

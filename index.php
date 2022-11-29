@@ -16,15 +16,15 @@
 </head>
 
 <body>
-    <?php include_once 'res/header.html' ?>
+    <?php include_once 'res/php/header.php' ?>
 
     <main>
         <form action="login.php" method="post">
             <h2>Black Mesa</h2>
-            <input type="email" name="email" <?= 'value="' . (isset($_GET['email']) ? $_GET['email'] : '') . '"' ?> placeholder=" " required>
-            <label data-text="Email"></label>
-            <input type="password" name="password" placeholder=" " required>
-            <label data-text="Senha"></label>
+            <input type="email" name="email" id="email" <?= 'value="' . (isset($_GET['email']) ? $_GET['email'] : '') . '"' ?> placeholder=" " required>
+            <label data-text="Email" for="email"></label>
+            <input type="password" name="password" id="password" placeholder=" " required>
+            <label data-text="Senha" for="password"></label>
             <input type="submit" value="Login">
         </form>
         <div>
@@ -35,7 +35,7 @@
         </div>
     </main>
 
-    <?php include_once 'res/footer.html' ?>
+    <?php include_once 'res/php/footer.php' ?>
 </body>
 
 </html>
