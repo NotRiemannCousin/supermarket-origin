@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php //include_once '../check.php' 
+<?php 
+        session_start();
 ?>
 
 <head>
@@ -16,10 +17,8 @@
     <main>
         <?php
 
-        session_start();
-        require_once '../classes/rb-mysql.php';
-        require_once '../res/scripts/constants.php';
-
+        require_once '../res/scripts/blackmesa.php';
+        
         $conn = R::setup('mysql:host=127.0.0.1;dbname=sistemaC', 'root', 'aluno');
 
         $user = R::load('user', $_SESSION["id"]);
