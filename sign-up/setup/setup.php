@@ -15,8 +15,7 @@
         <?php
         require_once '../../res/scripts/blackmesa.php';
 
-        $conn = mydbSetup();
-
+        
         if (
             $conn &&
             isset($_GET['name']) &&

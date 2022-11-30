@@ -1,9 +1,8 @@
 <?php
-session_start();
+
 
 require_once '../../res/scripts/blackmesa.php';
 
-$conn = mydbSetup();
 
 $user = R::load('user', $_SESSION["id"]);
 

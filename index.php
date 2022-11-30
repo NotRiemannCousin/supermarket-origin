@@ -1,11 +1,9 @@
+<?php
+if (isset($_SERVER['token_login']))
+    unset($_SERVER['token_login']);
+?>
 <!DOCTYPE html>
 <html lang="en">
-<?php
-    session_start();
-
-    unset($_SESSION["id"]);
-    unset($_SESSION["hash"]);
-?>
 
 <head>
     <meta charset="UTF-8">

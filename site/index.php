@@ -1,10 +1,12 @@
+<?php
+ 
+
+require_once '../res/scripts/blackmesa.php';
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
-<?php 
-        session_start();
-
-        require_once '../res/scripts/blackmesa.php';
-?>
 
 <head>
     <meta charset="UTF-8">
@@ -18,17 +20,14 @@
     <?php include_once '../res/php/header.php'; ?>
     <main>
         <?php
-        
-        $conn = mydbSetup();
 
-        $user = R::load('user', $_SESSION["id"]);
 
 
 
         ?>
         <div class="division hello" style="grid-area: hello">
             <h2>
-                <?= "Olá, $user->name!" ?>
+                <?= "Olá, $_USER->name!" ?>
                 </2>
         </div>
 
@@ -53,7 +52,7 @@
                             <td><?= ($product['storage'] ? 'sim' : 'não') ?></td>
                             <td>
                                 <a <?= 'href="details/details.php?id=' . $product['id'] . '"' ?>>
-                                    <svg viewBox="0 0 500 500"  style="height:1.4em">
+                                    <svg viewBox="0 0 500 500" style="height:1.4em">
                                         <path d="M 458.178 420.222 L 412.975 463.874 L 257.294 302.66 L 257.378 302.579 C 236.123 315.094 211.348 322.273 184.896 322.273 C 105.88 322.273 41.823 258.216 41.823 179.198 C 41.823 100.182 105.88 36.125 184.896 36.125 C 263.914 36.125 327.971 100.182 327.971 179.198 C 327.971 209.057 318.825 236.778 303.181 259.714 L 458.178 420.222 Z M 184.896 81.892 C 131.157 81.892 87.59 125.459 87.59 179.198 C 87.59 232.94 131.157 276.504 184.896 276.504 C 238.638 276.504 282.203 232.94 282.203 179.198 C 282.203 125.459 238.638 81.892 184.896 81.892 Z" style="stroke: black; fill: var(---gray-1);" data-bx-origin="-0.10045 -0.084454"></path>
                                     </svg>
                                 </a>
@@ -82,15 +81,15 @@
                     </tr>
                     <tr>
                         <td>Cargo</td>
-                        <td> <?= $offices[$user->office] ?> </td>
+                        <td> <?= $offices[$_USER->office] ?> </td>
                     </tr>
                     <tr>
                         <td>Sexo</td>
-                        <td> <?= $user->genre ?> </td>
+                        <td> <?= $_USER->genre ?> </td>
                     </tr>
             </table>
 
-            <?= in_array($user->office, [0, 2, 3]) ? '<a class="link" href="management/add-product.php">Adicionar Produto</a>' : '' ?>
+            <?= in_array($_USER->office, [0, 2, 3]) ? '<a class="link" href="management/add-product.php">Adicionar Produto</a>' : '' ?>
         </div>
     </main>
     <?php include_once '../res/php/footer.php';

@@ -1,8 +1,7 @@
 <?php
-session_start();
 
 
-unset($_SESSION["id"]);
-unset($_SESSION["hash"]);
+
+unset($_SESSION["token_login"]);
 
 header("location: index.php");
