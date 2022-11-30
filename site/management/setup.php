@@ -1,9 +1,9 @@
 <?php
+session_start();
+
 require_once '../../res/scripts/blackmesa.php';
 
 $conn = mydbSetup();
-
-session_start();
 
 if (
     $conn &&

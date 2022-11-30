@@ -2,6 +2,8 @@
 <html lang="en">
 <?php 
         session_start();
+
+        require_once '../res/scripts/blackmesa.php';
 ?>
 
 <head>
@@ -16,8 +18,6 @@
     <?php include_once '../res/php/header.php'; ?>
     <main>
         <?php
-
-        require_once '../res/scripts/blackmesa.php';
         
         $conn = mydbSetup();
 

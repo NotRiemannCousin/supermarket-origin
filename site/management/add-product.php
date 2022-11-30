@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
 session_start();
 
 require_once '../../res/scripts/blackmesa.php';
 
 $conn = mydbSetup();
+
 $user = R::load('user', $_SESSION["id"]);
 
 if(!in_array($user->office, [0, 2, 3]))
@@ -14,6 +13,8 @@ if(!in_array($user->office, [0, 2, 3]))
     exit();
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
