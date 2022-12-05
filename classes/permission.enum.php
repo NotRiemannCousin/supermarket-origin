@@ -1,10 +1,10 @@
 <?php
 
-enum Permission: int
+enum Permission
 {
-    case SeeProducts;
-    case AddProducts;
-    case DeleteProducts;
-    case SeeOthers;
-    case EditOthers;
+   case SeeProducts;
+   case AddProducts;
+   case DeleteProducts;
+   case SeeOthers;
+   case EditOthers;
 }
