@@ -5,7 +5,7 @@ require_once '../../../res/scripts/blackmesa.php';
 
 
 
-if(!in_array($_USER->office, [0, 2, 3]))
+if($_USER->hasPermissions(Permission::EditProducts))
 {
     header('location: ../../');
     exit();

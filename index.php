@@ -1,6 +1,6 @@
 <?php
-if (isset($_SERVER['token_login']))
-    unset($_SERVER['token_login']);
+if (isset($_SESSION['token_login']))
+    unset($_SESSION['token_login']);
 ?>
 <!DOCTYPE html>
 <html lang="en">

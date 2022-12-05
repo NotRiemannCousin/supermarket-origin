@@ -26,8 +26,9 @@ require_once 'functions.php';
 $_USER;
 
 $conn = mydbSetup();
+
 if (!($_SERVER['PHP_SELF'] == '/Marcelo/DB/sistemaC/index.php')) {
-  $token = R::findOne('tokenlogin', "token = '$_SESSION[token_login]'");
+  $token = R::findOne('tokenlogin', "token = '".$_SESSION['token_login']."'");
   if ($token)
     $_USER = R::load('user', $token['user_id']);
   else {

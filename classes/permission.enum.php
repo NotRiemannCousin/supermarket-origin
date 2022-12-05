@@ -4,7 +4,7 @@ enum Permission
 {
    case SeeProducts;
    case AddProducts;
-   case DeleteProducts;
+   case EditProducts;
    case SeeOthers;
    case EditOthers;
 }

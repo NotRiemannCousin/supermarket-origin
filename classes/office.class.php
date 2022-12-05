@@ -8,7 +8,7 @@ class Administrator extends User
     protected $permissions = [
         Permission::SeeProducts,
         Permission::AddProducts,
-        Permission::DeleteProducts,
+        Permission::EditProducts,
         Permission::SeeOthers,
         Permission::EditOthers
     ];
@@ -24,7 +24,7 @@ class Cashier extends User
     protected $permissions = [
         Permission::SeeProducts,
         Permission::AddProducts,
-        Permission::DeleteProducts
+        Permission::EditProducts
     ];
 }
 class HRManager extends User
