@@ -1,0 +1,9 @@
+@import url('../../../res/styles/default.css');
+
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

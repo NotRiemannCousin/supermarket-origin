@@ -1,14 +1,13 @@
 <?php
 
 
-require_once '../../res/scripts/blackmesa.php';
+require_once '../../../res/scripts/blackmesa.php';
 
 
-$user = R::load('user', $_SESSION["id"]);
 
-if(!in_array($user->office, [0, 2, 3]))
+if(!in_array($_USER->office, [0, 2, 3]))
 {
-    header('location: ../');
+    header('location: ../../');
     exit();
 }
 ?>
@@ -18,14 +17,14 @@ if(!in_array($user->office, [0, 2, 3]))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="add-product.css">
-    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Add Product</title>
 </head>
 
 <body>
-    <?php include_once '../../res/header.html'; ?>
+    <?php include_once '../../../res/php/header.php'; ?>
     <main>
-        <form action="setup.php" method="post">
+        <form action="add.php" method="post">
             <h2>Black Mesa</h2>
 
             <input type="text" name="name" placeholder=" " required>
@@ -42,9 +41,9 @@ if(!in_array($user->office, [0, 2, 3]))
         <div class="error" <?= (isset($_GET['error']) ? '' : 'style="animation-name: none; visibility: hidden;"') ?>>
             Nâo foi possivel adicionar o seu produto... Tente novamente.
         </div>
-        <a href="../">Voltar</a>
+        <a href="../../../">Voltar</a>
     </main>
-    <?php include_once '../../res/footer.html' ?>
+    <?php include_once '../../../res/php/footer.php' ?>
 </body>
 
 </html>

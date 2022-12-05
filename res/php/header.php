@@ -11,7 +11,7 @@
             <h1>Black Mesa</h1>
         </div>
         <?php {
-            if (isset($_SESSION['id'])) {
+            if (isset($_SESSION['token_login'])) {
                 $path = getcwd();
                 chdir($_SERVER['DOCUMENT_ROOT']);
         ?>
