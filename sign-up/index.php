@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
 <body>
     <?php include_once '../res/php/header.php'; ?>
     <main>
-        <form action="setup/setup.php" method="get">
+        <form action="setup/" method="post">
             <h2>Black Mesa</h2>
 
             <input type="text" name="name" id="name" <?= 'value="' . (isset($_GET['name']) ? $_GET['name'] : '') . '"' ?> placeholder=" " required>

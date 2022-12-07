@@ -134,6 +134,7 @@ form h2 {
     border-radius: 1em;
     text-align: center;
     top: 66%;
+    margin-left: 25%;
 
     animation-name: hide-error-msg;
     animation-duration: 1s;

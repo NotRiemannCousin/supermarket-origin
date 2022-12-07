@@ -3,7 +3,7 @@ if (isset($_SESSION['token_login']))
     unset($_SESSION['token_login']);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -26,7 +26,7 @@ if (isset($_SESSION['token_login']))
             <input type="submit" value="Login">
         </form>
         <div>
-            <a href="sign-up/sign-up.php">Sign-Up</a>
+            <a href="sign-up/index.php">Sign-Up</a>
         </div>
         <div class="error" <?= (isset($_GET['error']) ? '' : 'style="animation-name: none; visibility: hidden;"') ?>>
             O email ou a senha estão incorretos! Tente novamente.

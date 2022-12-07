@@ -9,7 +9,7 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
-        // "Sem título.png": true,
+        "Sem título.png": true,
         // "classes": true,
         // "sign-up": true,
         // "site": true,
@@ -19,7 +19,7 @@
         // "styles.css": true,
         // "login.php": true,
         // "logout.php": true,
-        // "sla.*": true,
+        "sla.*": true,
         // "**/*.php": true,
         "**/*.css": true,
     }
