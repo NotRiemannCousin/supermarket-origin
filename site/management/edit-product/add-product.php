@@ -6,7 +6,7 @@ require_once '../../../res/scripts/blackmesa.php';
 
 $user = R::load('user', $_SESSION["id"]);
 
-if(!in_array($user->office, [0, 2, 3]))
+if(!$_USER->hasPermissions(Permission::AddProducts))
 {
     header('location: ../../');
     exit();
