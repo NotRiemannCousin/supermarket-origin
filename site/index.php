@@ -23,7 +23,7 @@ require_once '../res/scripts/blackmesa.php';
       ?>
       <div class="division hello" style="grid-area: hello">
          <h2>
-            <?= "Olá, $_USER->name!" ?>
+            <?= "Olá, {$_USER->getName()}!" ?>
          </2>
       </div>
       <div class="division content" style="grid-area: content">
@@ -84,11 +84,11 @@ require_once '../res/scripts/blackmesa.php';
                </tr>
                <tr>
                   <td>Cargo</td>
-                  <td> <?= $offices[$_USER->office] ?> </td>
+                  <td> <?= $_USER->getOffice() ?> </td>
                </tr>
                <tr>
                   <td>Sexo</td>
-                  <td> <?= $_USER->genre ?> </td>
+                  <td> <?= $_USER->getGenre() ?> </td>
                </tr>
             </table>
 

@@ -4,7 +4,6 @@
 require_once '../../../res/scripts/blackmesa.php';
 
 
-$user = R::load('user', $_SESSION["id"]);
 
 if(!$_USER->hasPermissions(Permission::AddProducts))
 {

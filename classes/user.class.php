@@ -9,12 +9,12 @@ abstract class User
    protected $permissions;
 
 
-   public function __construct($id, $name, $email, $password, $genre) {
-      $this->id = $id;
-      $this->name = $name;
-      $this->email = $email;
-      $this->password = $password;
-      $this->genre = $genre;
+   public function __construct($user) {
+      $this->id = $user['id'];
+      $this->name = $user['name'];
+      $this->email = $user['email'];
+      $this->password = $user['password'];
+      $this->genre = $user['genre'];
    }
 
 
@@ -36,6 +36,11 @@ abstract class User
 
    public function getGenre() {
       return $this->genre;
+ 
+   }
+
+   public function getOffice(){
+      return get_class($this);
    }
 
    public function getPermissions() {

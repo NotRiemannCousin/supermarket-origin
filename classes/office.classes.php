@@ -1,5 +1,5 @@
 <?php
-include_once 'permission.enum.php.php';
+include_once 'permission.enum.php';
 include_once 'user.class.php';
 
 
