@@ -1,7 +1,7 @@
 <?php
 
 
-require_once '../../../res/scripts/blackmesa.php';
+require_once '../../../res/scripts/basic-config.php';
 
 
 if (

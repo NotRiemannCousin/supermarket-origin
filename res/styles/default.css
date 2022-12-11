@@ -1,6 +1,6 @@
 :root {
     ---black-mesa: #fa7b01;
-    ---dark-black-mesa: #784e00;
+    ---origin-color: #784e00;
 
     ---primary: #171717;
     ---primary-light: #222;
@@ -83,7 +83,7 @@ input[type='number'] + label::after {
     content: attr(data-text);
     margin-left: .2em;
     padding: 0 .2em 0 .2em;
-    color: var(---dark-black-mesa);
+    color: var(---origin-color);
     position: absolute;
     transform: translateY(-200%);
     transition-duration: .3s;

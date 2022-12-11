@@ -12,6 +12,6 @@ $doc_root = preg_replace("!${_SERVER['SCRIPT_NAME']}$!", '', ServerStd('SCRIPT_F
 chdir($_SERVER["DOCUMENT_ROOT"]);*/
 // echo $_SERVER["DOCUMENT_ROOT"].'<br>'.getcwd();
 
-require 'res/scripts/blackmesa.php';
+require 'res/scripts/basic-config.php';
 
 ?>
