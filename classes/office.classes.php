@@ -3,7 +3,7 @@ include_once 'permission.enum.php';
 include_once 'user.class.php';
 
 
-class Administrator extends User
+class CleaningAssistant extends User
 {
     protected $permissions = [
         Permission::SeeProducts,
@@ -13,7 +13,7 @@ class Administrator extends User
         Permission::EditOthers
     ];
 }
-class CommonUser extends User
+class StocHelper extends User
 {
     protected $permissions = [
         Permission::SeeProducts
@@ -27,7 +27,7 @@ class Cashier extends User
         Permission::EditProducts
     ];
 }
-class HRManager extends User
+class SecurityGuard extends User
 {
     protected $permissions = [
         Permission::SeeProducts,
@@ -35,7 +35,7 @@ class HRManager extends User
         Permission::EditOthers
     ];
 }
-class Counter extends User
+class AdministrativeAssistant extends User
 {
     protected $permissions = [
         Permission::SeeProducts,

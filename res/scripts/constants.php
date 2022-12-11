@@ -2,11 +2,11 @@
 
 
 $offices = [
-        'Administrador',
-        'Usuario Comum',
+        'Auxiliar de Limpeza',
+        'Auxiliar de Estoque',
         'Operador de Caixa',
-        'Gerente de RG',
-        'Contador'
+        'Segurança',
+        'Auxiliar Administrativo'
 ];
 
 // 

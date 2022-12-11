@@ -51,19 +51,19 @@ if (!in_array(ServerStd('PHP_SELF'), [
 
     switch ($_USER['office']) {
       case 0:
-        $_USER = new  Administrator($_USER);
+        $_USER = new  CleaningAssistant($_USER);
         break;
       case 1:
-        $_USER = new CommonUser($_USER);
+        $_USER = new StocHelper($_USER);
         break;
       case 2:
         $_USER = new Cashier($_USER);
         break;
       case 3:
-        $_USER = new HRManager($_USER);
+        $_USER = new SecurityGuard($_USER);
         break;
       case 4:
-        $_USER = new Counter($_USER);
+        $_USER = new AdministrativeAssistant($_USER);
         break;
     }
   } else {
