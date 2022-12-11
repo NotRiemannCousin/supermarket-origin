@@ -13,7 +13,7 @@
     <?php include_once '../res/php/header.php'; ?>
     <main>
         <form action="setup/setup.php" method="get">
-            <h2>Black Mesa</h2>
+            <h2>Origin</h2>
 
             <input type="text" name="name" id="name" <?= 'value="' . (isset($_GET['name']) ? $_GET['name'] : '') . '"' ?> placeholder=" " required>
             <label for="name" data-text="Nome"></label>

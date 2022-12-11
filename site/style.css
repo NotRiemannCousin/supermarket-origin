@@ -62,6 +62,10 @@ div table thead tr td * {
     text-align: center;
 }
 
+div table thead{
+    width: 100%;
+}
+
 div table td {
     /* white-space: nowrap; */
     /* text-overflow: ellipsis; */

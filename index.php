@@ -18,7 +18,7 @@ if (isset($_SESSION['token_login']))
 
     <main>
         <form action="login.php" method="post">
-            <h2>Black Mesa</h2>
+            <h2>Origin</h2>
             <input type="email" name="email" id="email" <?= 'value="' . (isset($_GET['email']) ? $_GET['email'] : '') . '"' ?> placeholder=" " required>
             <label data-text="Email" for="email"></label>
             <input type="password" name="password" id="password" placeholder=" " required>

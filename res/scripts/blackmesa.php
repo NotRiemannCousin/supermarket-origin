@@ -7,25 +7,23 @@ function starts_with($string, $startString)
   return (substr($string, 0, $len) === $startString);
 }
 
-$prefix_header = (starts_with(str_replace('\\',  '/', $_SERVER['PHP_SELF']), '/black-mesa-site') ?
-  "/black-mesa-site/" :
-  "/Marcelo/DB/sistemaC/");
+function ServerStd($serverS)
+{
+  return str_replace('\\',  '/', $_SERVER[$serverS]);
+}
 
+define('SITE_ADDR_SUFIX', (starts_with(ServerStd('PHP_SELF'), '/supermarket-origin') ?
+  "/supermarket-origin/" :
+  "/Marcelo/DB/sistemaC/"));
 
-$isthis = in_array(
-  str_replace('\\',  '/', $_SERVER['PHP_SELF']),
-  [
-    '/black-mesa-site/res/scripts/blackmesa.php',
-    'Marcelo/DB/sistemaC/res/scripts/blackmesa.php'
-  ]
-);
+define('SITE_ADDR', ServerStd('DOCUMENT_ROOT') . SITE_ADDR_SUFIX);
+
 $path = getcwd();
 
 
+$new_path = '/res/scripts';
 
-$new_path = $prefix_header . '/res/scripts';
-
-chdir($_SERVER['DOCUMENT_ROOT'] . $new_path);
+chdir(SITE_ADDR . $new_path);
 
 require_once '../../classes/rb-mysql.php';
 require_once '../../classes/office.classes.php';
@@ -36,12 +34,18 @@ $_USER;
 
 $conn = mydbSetup();
 
-if (!in_array(str_replace('\\',  '/', $_SERVER['PHP_SELF']), [
-  $prefix_header . 'sign-up/setup/index.php',
-  $prefix_header . 'index.php'
+if (!in_array(ServerStd('PHP_SELF'), [
+  SITE_ADDR_SUFIX . 'sign-up/setup/index.php',
+  SITE_ADDR_SUFIX . 'index.php',
+  SITE_ADDR_SUFIX . 'login.php'
 ])) {
-  if (isset($_SESSION['token_login']))
-    $token = R::findOne('tokenlogin', "token = '" . $_SESSION['token_login'] . "'");
+
+  if (!isset($_SESSION['token_login']))
+    goto logout;
+
+  $token = R::findOne('tokenlogin', "token = '" . $_SESSION['token_login'] . "'");
+
+
   if ($token) {
     $_USER = R::load('user', $token['user_id']);
 
@@ -63,7 +67,9 @@ if (!in_array(str_replace('\\',  '/', $_SERVER['PHP_SELF']), [
         break;
     }
   } else {
-    header("location: $_SERVER[DOCUMENT_ROOT]$prefix_header");
+    logout:
+    header('location: http://' . $_SERVER['SERVER_NAME'] . SITE_ADDR_SUFIX);
+    die;
   }
 }
 

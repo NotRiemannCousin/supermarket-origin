@@ -25,7 +25,7 @@ if(!$_USER->hasPermissions(Permission::AddProducts))
     <?php include_once '../../../res/header.html'; ?>
     <main>
         <form action="edit.php" method="post">
-            <h2>Black Mesa</h2>
+            <h2>Origin</h2>
 
             <input type="text" name="name" placeholder=" " required>
             <label data-text="Nome"></label>
