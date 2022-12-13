@@ -18,6 +18,7 @@
 }
 
 main {
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,8 +28,7 @@ main {
 
 /*
 
-    color: white;
-    background-color: var(---gray-light);
+    background-color: var(---white-7);
     padding: 1em 2em;
     border-radius: 1em;
     display: grid;
@@ -62,7 +62,7 @@ div table {
     background-color: var(---gray-2);
     border-collapse: collapse;
     width: 100%;
-    border: 1px solid var(---gray-light);
+    border: 1px solid var(---white-7);
 }
 
 div table thead tr td * {
@@ -75,7 +75,7 @@ div table td {
     /* text-overflow: ellipsis; */
     overflow: hidden;
     max-height: 2rem;
-    border: 1px solid var(---gray-light);
+    border: 1px solid var(---white-7);
     padding: .3em;
 }
 

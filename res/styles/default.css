@@ -7,13 +7,40 @@
 
 
     ---gray-dark: #171717;
-    ---gray-light: #222;
+    ---gray-light: rgb(230, 230, 230);
 
     ---gray-1: #6e6e6e;
-    ---gray-2: #434343;
-    ---gray-white-1: #e9e9e9;
-    ---gray-white-2: #ffffff;
-    ---gray-white-3: #d1d1d1;
+    ---gray-2: #434343; 
+
+    ---gray-1: rgb(37, 37, 37);
+    ---gray-2: rgb(47, 47, 47);
+    ---gray-3: rgb(57, 57, 57);
+    ---gray-4: rgb(67, 67, 67);
+    ---gray-5: rgb(77, 77, 77);
+    ---gray-6: rgb(87, 87, 87);
+    ---gray-7: rgb(97, 97, 97);
+    ---gray-8: rgb(107, 107, 107);
+    ---gray-9: rgb(117, 117, 117);
+    ---gray-10: rgb(127, 127, 127);
+    ---gray-11: rgb(137, 137, 137);
+    ---gray-12: rgb(147, 147, 147);
+    ---gray-13: rgb(157, 157, 157);
+    ---gray-14: rgb(167, 167, 167);
+    ---gray-15: rgb(177, 177, 177);
+    ---gray-16: rgb(187, 187, 187);
+    ---gray-17: rgb(197, 197, 197);
+    ---gray-18: rgb(207, 207, 207);
+    ---gray-19: rgb(217, 217, 217);
+
+    ---white-1: rgb(222, 222, 222);
+    ---white-2: rgb(227, 227, 227);
+    ---white-3: rgb(232, 232, 232);
+    ---white-4: rgb(237, 237, 237);
+    ---white-5: rgb(242, 242, 242);
+    ---white-6: rgb(247, 247, 247);
+    ---white-7: rgb(252, 252, 252);
+    ---white-8: rgb(255, 255, 255);
+
     /* #dcdcdc; */
 
     ---gray-alpha-50: #2b2a2aaa;
@@ -28,6 +55,7 @@
 }
 
 main {
+    color: black;
     flex-grow: 100;
     margin: 1em 2em;
 }
@@ -79,7 +107,7 @@ input[type='text']+label::after,
 input[type='email']+label::after,
 input[type='password']+label::after,
 input[type='number']+label::after {
-    background-color: var(---gray-white-2);
+    background-color: var(---white-7);
     content: attr(data-text);
     margin-left: .2em;
     padding: 0 .2em 0 .2em;
@@ -105,7 +133,7 @@ input[type='email'],
 input[type='password'],
 input[type='number'] {
     padding: .9em .5em .4em .5em;
-    background-color: var(---gray-white-2);
+    background-color: var(---white-7);
     width: -webkit-fill-available;
     display: block;
     margin: 10px 0;
@@ -114,7 +142,7 @@ input[type='number'] {
 form {
     border: 1px solid var(---gray-alpha-50);
     font-family: none;
-    background-color: var(---gray-white-2);
+    background-color: var(---white-7);
     border-radius: .6em;
     padding: 1.3em;
     min-width: 25%;
@@ -126,7 +154,7 @@ form h2 {
 
 
 .error {
-    color: white;
+    color: black;
     background-image: linear-gradient(var(---error-color), var(---error-color-dark));
     position: fixed;
     width: 50%;

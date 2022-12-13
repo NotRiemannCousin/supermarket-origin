@@ -18,7 +18,6 @@
 }
 
 main {
-    color: white;
     background-color: var(---gray-light);
     padding: 1em 2em;
     border-radius: 1em;
